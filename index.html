@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- *CDN Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- *icon Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="img/logo.png" />
+    <!-- *CSS interno -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- *Titulo de la pagina -->
+    <title>Psicologa-Dra.Andrea Morales</title>
+</head>
+
+<body>
+    <!-- * ***************** INICIO DE ENCABEZADO *************************** -->
+    <header>
+        <!--*Metodología BEM o Camel case -->
+        <!-- Los nombres de clases con convención BEM,pueden tener la siguiente sintaxis:
+        [bloque]
+        [bloque]__[elemento]
+        [bloque]--[modificador]
+        [elemento]--[modificador]
+        [bloque]__[elemento]--[modificador] 
+    
+    Los nombres de clases con convención Camel case ,pueden tener la siguiente sintaxis:
+    class = bloqueoElemento
+-->
+        <section class="container menu">
+            <div class="menu__logo">
+                <a href="index.html"><img src="img/logo.png" alt="Dra/Andrea Morales/Psicologa"></a>
+            </div>
+            <nav class="nav-menu">
+                <input type="checkbox" name="check" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="bi bi-list"></i>
+                </label>
+                <!-- Listas -->
+                <ul>
+                    <!-- Etiqueta <a> es lin/enlace interno o externo de la pagina web -->
+                    <li><a href="index.html" class="menu--active">Inicio</a></li>
+                    <li><a href="pages/experiencia.html">Experiencia</a></li>
+                    <li><a href="pages/cliente.html">Atención al cliente</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <!-- * ***************** FIN DE  ENCABEZADO *************************** -->
+
+
+    <!-- * *****************   INICIO DE CUERPO PRINCIPAL *************************** -->
+    <main class=" container">
+        <!-- Los containers son un bloque de construcción fundamental de Bootstrap (framework)que contienen, rellenan y alinean su contenido dentro de un dispositivo o ventana gráfica determinada. -->
+        <section class="portada">
+            <div class="portada__titulo">
+                <h1>Dra.Andrea Morales</h1> <!-- Titulo principal -->
+                <h2>Psicologa</h2> <!-- Subtitulo -->
+            </div>
+            <video src="video/psicologa-paciente.mp4" muted loop autoplay></video>
+        </section>
+        <section>
+            <div class="Psicoterapia">
+                <h2>PSICOTERAPIA COGNITIVO CONDUCTUAL Y SISTEMATICA</h2>
+            </div>
+            <!-- La etiqueta article <article> forma parte del grupo de etiquetas semánticas de HTML5, no tiene una funcionalidad visual por sí sola, se le puede agregar un estilo propio con CSS.
+                
+            La etiqueta <article> es un contenedor,  daa información a los buscadores como google para que estos entiendan mejor la estructura de nuestro documento, le indica a los motores de búsqueda que el contenido definido entre esta etiqueta es información útil para el usuario final. -->
+
+            <article class="info">
+                <article class="info__psicoterapia">
+                    <!-- La etiqueta <p> es de parrafo -->
+
+                    <p>El trabajo terapéutico se enfoca en <span>modificar pensamientos y comportamientos.</span> Se
+                        explora el funcionamiento presente de la persona y fomenta la independencia del paciente. Se
+                        trabaja sobre las creencias y las conductas perjudiciales.</p>
+                    <p> A partir de los mejores aportes de distintas ramas de la Psicoterapia y de mi propia
+                        experiencia, acompaño a mis consultantes en su camino de resolución de temas que los
+                        intranquilizan, angustian y a veces paralizan.</p>
+                    <p>La relación <span>terapeuta-paciente es de colaboración y el enfoque es didáctico.</span> Se
+                        definen objetivos concretos a lograr. Se utilizan técnicas de registro, tareas, lecturas, etc.
+                    </p>
+                </article>
+                <article class="info__img">
+                    <img src="img/paciente-secion.jpg"
+                        alt="Imagen del trabajo terapéutico que se enfoca en modificar pensamientos y comportamientos.">
+                </article>
+            </article>
+        </section>
+        <section>
+            <div class="testimonios">
+                <h2>TESTIMONIOS DE PACIENTES</h2>
+            </div>
+            <article class="tarjetas">
+                <article class="tarjetas__testimonios">
+                    <img src="img/paciente-primero.jpg" alt="Testimonio de pacientes">
+                    <p> Excelente profesional!! Super recomendable me ayudo mucho en un momento muy difícil de mi vida!!
+                        Gracias 🙏 🙏 🙏 🙏</p>
+                    <h2>ROMINA TORRES</h2>
+                </article>
+                <article class="tarjetas__testimonios">
+                    <img src="img/paciente-segundo.jpg" alt="Testimonio de pacientes">
+                    <p>Excelente profesional! Muy linda experiencia, me sentí super cómodo en las sesiones. Recomendable
+                        100%</p>
+                    <h2>CARLOS SANCHEZ</h2>
+                </article>
+                <article class="tarjetas__testimonios">
+                    <img src="img/paciente-tercero.jpg" alt="Testimonio de pacientes">
+                    <p>Excelente atención de Andreal!! Muy atenta, con la palabra justa en todo el tratamiento. </p>
+                    <h2>MONICA DIAZ</h2>
+                </article>
+                <article class="tarjetas__testimonios">
+                    <img src="img/paciente-cuarto.jpg" alt="Testimonio de pacientes">
+                    <p>Andrea me está ayudando a acomodar mi vida, literalmente. Muchas gracias por tanta sabiduría y
+                        aprendizaje. ❤️‍</p>
+                    <h2>TOMAS LOPEZ</h2>
+                </article>
+            </article>
+        </section>
+    </main>
+    <!-- * *****************   FIN DE CUERPO PRINCIPAL *************************** -->
+
+    <!-- * *****************   INICIO DE  PIE DE PAGINA *************************** -->
+    <footer>
+        <section class="footer">
+            <div class="footer__principal container">
+                <div class="footer__info">
+                    <h3>Psicoterapia Presencial</h3> <!-- Subtitulo del subtitulo (<h2>) -->
+                    <ul>
+                        <li><a href="https://goo.gl/maps/Jk7k8DUrSkj5DiDE9" target="_blank"> Av. Corrientes al 4900,
+                                Ciudad de Buenos Aires.</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <h3>Psicoterapia Virtual</h3>
+                    <ul>
+                        <li><a href="https://meet.google.com/?hs=197&authuser=0">Desde cualquier lugar en que te
+                                encuentres.</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send?phone=549117622-1147">Tel: (05411) 15 7622-1147</a>
+                        </li>
+                        <li><a href="https://mail.google.com/" target="_blank">Email: andrea-morales@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__creador">
+                <p> &copy;2023 por Dra.Andrea Morales. Creador Erik Salinas</p>
+            </div>
+        </section>
+    </footer>
+    <!-- * *****************   FIN DE  PIE DE PAGINA *************************** -->
+
+    <!-- *CDN Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

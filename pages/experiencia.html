@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- *CDN Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- *icon Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="../img/logo.png" />
+    <script src="../javascript/experiencia.js" defer></script>
+    <script src="../javascript/contacto.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Psicologa-Dra.Andrea Morales</title>
+</head>
+
+<body>
+    <!-- * ***************** INICIO DE ENCABEZADO *************************** -->
+    <header>
+        <section class="container menu">
+            <div class="menu__logo">
+                <a href="../index.html"><img src="../img/logo.png" alt="Dra/Andrea Morales/Psicologa"></a>
+            </div>
+            <nav class="nav-menu">
+                <input type="checkbox" name="check" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="bi bi-list"></i>
+                </label>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="experiencia.html" class="menu--active">Experiencia</a></li>
+                    <li><a href="../pages/cliente.html">Atención al cliente</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <!-- * ***************** FIN DE  ENCABEZADO *************************** -->
+
+    <!-- * *****************   INICIO DE CUERPO PRINCIPAL *************************** -->
+    <main class="container">
+        <section class="psicologa">
+            <h1>CURRICULUM</h1>
+            <article class="curriculum">
+                <article class="curriculum__info">
+                    <div class="informacion">
+                        <p>"Soy Licenciada en Psicología y me recibí en la Universidad Nacional de La Plata. Realicé
+                            anualmente
+                            cursos de posgrado de formación en psicoanálisis. Tengo experiencia hospitalaria y fui
+                            docente en la
+                            Universidad de Buenos Aires. He sido miembro de la EOL (Escuela de la orientación Lacaniana)
+                            y
+                            supervisora clínica, para residentes psicólogos en cuatro hospitales de Bs As.
+                        </p>
+                        <br>
+                        <p>
+                            Actualmente me dedico a atender a adultos y parejas. También doy supervisiones clínicas a
+                            colegas en
+                            forma individual o en grupos. Actualizo mi formación con investigación y realizando cursos
+                            de
+                            psicoanálisis con perspectiva de género. Podés dejarme un mensaje en mi celular </p>
+                        <a href="" class="contacto">CONTACTO</a>
+                    </div>
+
+                </article>
+                <article class="curriculum__img">
+                    <img src="../img/perfil-psicologa.jpg" alt="Perfil de Dr.Andrea Morales psicologa">
+                </article>
+            </article>
+        </section>
+        <section class="modal">
+            <article class="modal__container">
+                <article class="modal__ventana">
+                    <a href="#" class="modal__close"><i class="bi bi-x-lg"></i></a>
+                    <h2>CONTACTO</h2>
+                    <p class="modale__paragraph">Si deseas consultar mayor información sobre nuestro servicio o tienes
+                        alguna duda al respecto,no dudes en contactarte con nosotros.</p>
+                </article>
+                <article>
+                    <form action="#" method="post" name="contacto" accept-charset="UTF-8" class="formulario"
+                        id="formulario" target="_blank">
+                        <div class="formulario__datos" id="formulario">
+                            <div class="datos">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Ingrese nombre" id="nombre" required>
+                            </div>
+                            <div class="datos">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" placeholder="Ingrese apellido" id="apellido"
+                                    required>
+                            </div>
+                            <div class="datos">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" name="telefono" placeholder="1193857230" required>
+                            </div>
+                            <div class="datos">
+                                <label for="correo">Dirreción de correo</label>
+                                <input type="email" name="correo" placeholder="lucastorres2@gmail.com">
+                            </div>
+                        </div>
+                        <div class="formulario__datos--mensaje">
+                            <div class="mensaje">
+                                <label for="texto">Mensaje</label>
+                                <textarea name="texto" placeholder="Escribe tu mensaje aqui..." spellcheck="true"
+                                    maxlength="250"></textarea>
+                            </div>
+                            <div class="formulario__datos--envio">
+                                <button type="submit">ENVIAR</button>
+                            </div>
+                    </form>
+                </article>
+                <article>
+                    <p id="respuesta"></p>
+                    </div>
+                    <div class="modal__ventana2">
+                        <a href="https://www.facebook.com/messages/t/108451491460329" target="_blank"><img
+                                src="../img/messenger-svgrepo-com.svg" alt="Red social facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img
+                                src="../img/instagram-1-svgrepo-com.svg" alt="Red social instagram"></a>
+                        <a href="//api.whatsapp.com/send?phone=549117622-1147" target="_blank"><img
+                                src="../img/whatsapp-svgrepo-com.svg" alt="Red social whatsapp"></a>
+                        <a href="../pages/contacto.html" target="_blank"><img src="../img/gmail-svgrepo-com.svg"
+                                alt="Red social gmail"></a>
+                    </div>
+                    </div>
+                </article>
+        </section>
+    </main>
+    <!-- * *****************   FIN DE CUERPO PRINCIPAL  *************************** -->
+
+    <!-- * *****************   INICIO DE PIE DE PAGINA *************************** -->
+    <footer>
+        <section class="footer">
+            <div class="footer__principal container">
+                <div class="footer__info">
+                    <h3>Psicoterapia Presencial</h3>
+                    <ul>
+                        <li><a href="https://goo.gl/maps/Jk7k8DUrSkj5DiDE9" target="_blank"> Av. Corrientes al 4900,
+                                Ciudad de Buenos Aires.</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <h3>Psicoterapia Virtual</h3>
+                    <ul>
+                        <li><a href="https://meet.google.com/?hs=197&authuser=0">Desde cualquier lugar en que te
+                                encuentres.</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send?phone=549117622-1147">Tel: (05411) 15 7622-1147</a>
+                        </li>
+                        <li><a href="https://mail.google.com/" target="_blank">Email: andrea-morales@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__creador">
+                <p> &copy;2023 por Dra.Andrea Morales. Creador Erik Salinas</p>
+            </div>
+        </section>
+    </footer>
+    <!-- * *****************   FIN DE PIE DE PAGINA *************************** -->
+    <!-- *CDN Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

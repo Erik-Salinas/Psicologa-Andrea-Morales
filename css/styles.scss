@@ -1,0 +1,920 @@
+/* 
+* VARIABLES
+ */
+/* 
+Las variables en css guardan  informacion,se crean dentro de :root{} ( Regla que aplica estilo a la raiz del documento)
+*/
+:root {
+    /* colores-principales */
+    --first-color: #454444;
+    --first-alpha-color: white;
+
+    --second-color: #B48FFF;
+    --second-alpha-color: white;
+
+    --third-color: black;
+
+    --first-typography: 'Darker Grotesque', sans-serif;
+    --second-typography: 'Black Han Sans', sans-serif;
+}
+
+/* 
+*RESET SIMPLE
+ */
+/* 
+ Los reset de CSS básicamente nos permiten una puesta a cero de todos los navegadores para que muestren las propiedades de CSS del modo más homogéneo posible.
+  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* 
+!Resets de CSS Más Populares
+Normalize CSS (usado por el Boilerplate)
+HTML5 Doctor Reset CSS
+Eric Meyer’s Reset
+Yahoo! (YUI 3) Reset CSS
+Universal Selector * Reset
+Mi consejo es que, para HTML5/CSS3, es mejor usar Normalize o uno personalizado.
+ */
+/*
+* ***************** INICIO DE  ENCABEZADO ***************************
+ */
+
+/*
+* MENU 
+*/
+header {
+    background: var(--first-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+/* Flexbox es un módulo de diseño de CSS3 que se creó para mejorar la forma en la que se hace diseño responsive, evitando así el uso de float, escribiendo menos código y facilitando el posicionamiento de elementos, incluso no teniendo noción del tamaño de éstos. Básicamente la idea de Flexbox es poder alterar el ancho, alto y posicionamiento de elementos de la mejor manera con el espacio del que disponemos. */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__logo img {
+    width: 11rem;
+}
+
+/* menu responsive */
+.bi-list {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.bi-list,
+#check {
+    display: none;
+}
+
+nav>ul {
+    display: flex;
+}
+
+
+
+nav>ul>li>a {
+    margin-right: 3rem;
+    text-decoration: none;
+    color: var(--first-alpha-color);
+    font-family: var(--first-typography);
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+nav>ul>li>a:hover {
+    color: var(--second-color);
+}
+
+.menu--active {
+    color: var(--second-color);
+}
+
+.menu--active:hover {
+    color: var(--second-alpha-color);
+}
+
+/* 
+* ***************** FIN DE ENCABEZADO ***************************
+*/
+/* 
+ * *****************   INICIO DE CUERPO PRINCIPAL ***************************  
+ */
+.portada {
+    margin-top: 6.5rem;
+}
+
+.portada__titulo>h1 {
+    text-align: center;
+    font-family: var(--second-typography);
+    color: var(--third-color);
+    font-weight: 400;
+    font-size: 3em;
+}
+
+.portada__titulo>h2 {
+    text-align: center;
+    font-family: var(--first-typography);
+    color: var(--third-color);
+    font-weight: 400;
+    font-size: 2em;
+}
+
+video {
+    width: 100%;
+    margin-top: 6.5rem;
+}
+
+.Psicoterapia>h2,
+.testimonios>h2 {
+    text-align: center;
+    font-family: var(--second-typography);
+    color: var(--third-color);
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.info {
+    display: flex;
+    margin-top: 6rem;
+    justify-content: center;
+    gap: 3em;
+}
+
+.info__psicoterapia>p {
+    font-size: 1.5em;
+    color: var(--third-color);
+    font-family: var(--first-typography);
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.info__psicoterapia>p>span {
+    font-weight: 700;
+}
+
+.info__img>img {
+    width: 30rem;
+    height: 50vh;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 5rem;
+}
+
+.tarjetas__testimonios {
+    width: 17rem;
+    border: var(--third-color) solid 1px;
+    border-bottom: var(--third-color) solid 4px;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.tarjetas__testimonios img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    border: var(--third-color) solid 2px;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+.tarjetas__testimonios p {
+    font-size: 1em;
+    font-family: var(--first-typography);
+    color: var(--third-color);
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .3rem;
+}
+
+.tarjetas__testimonios h2 {
+    font-size: 1em;
+    font-family: var(--second-typography);
+    color: var(--third-color);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.tarjetas .tarjetas__testimonios:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.tarjetas:hover>.tarjetas__testimonios:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+/* 
+
+
+/*
+*EXPERIENCIA 
+ */
+.psicologa h1 {
+    text-align: center;
+    color: var(--third-color);
+    font-family: var(--second-typography);
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 6.5rem 0 2.5rem;
+}
+
+.curriculum {
+    display: flex;
+    align-items: center;
+}
+
+
+.informacion {
+    background-color: var(--first-alpha-color);
+    position: relative;
+    z-index: 99;
+    left: 5rem;
+    color: black;
+    font-family: var(--first-typography);
+    font-size: 1.5em;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.informacion a {
+    color: var(--third-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: .1rem 1.5rem .1rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.informacion a:hover {
+    background-color: var(--third-color);
+    color: var(--first-alpha-color);
+    transition: all 1s ease;
+    font-size: 1.5rem;
+    font-family: var(--first-typography);
+}
+
+
+.curriculum__img img {
+    width: 25rem;
+}
+
+/* 
+*CONTACTO
+ */
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6.5rem;
+}
+
+.contacto__img img {
+    width: 30rem;
+}
+
+.contacto__formulario {
+    border-bottom: black solid 1px;
+    width: 30rem;
+}
+
+.contacto__formulario h1 {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 2rem;
+    font-family: var(--second-typography);
+    font-weight: 400;
+}
+
+.contacto__formulario p {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 1rem;
+    font-family: var(--first-typographyraphy);
+    font-weight: 400;
+}
+
+.formulario__datos,
+.formulario__datos--mensaje {
+    display: flex;
+    gap: .625rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.datos {
+    width: calc(100% / 2 - 1.5rem);
+    margin-top: .625rem;
+}
+
+.datos label,
+.mensaje label {
+    display: block;
+    color: var(--third-color);
+    font-family: var(--first-typography);
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: .3rem;
+}
+
+.datos input {
+    width: 100%;
+    height: 4.5vh;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding-left: .625rem;
+    font-size: 1rem;
+}
+
+.datos input:focus,
+.datos input::placeholder,
+.mensaje textarea::placeholder,
+.mensaje textarea:focus {
+    border-color: var(--second-color);
+    border-bottom-width: .5rem;
+    transition: all 0.8s ease;
+}
+
+.mensaje,
+.formulario__datos--envio {
+    width: calc(100% / 1 - 1.5rem);
+    margin-top: 10px;
+}
+
+.mensaje textarea {
+    width: 100%;
+    height: 12vh;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding-left: .625rem;
+    font-size: 1rem;
+}
+
+.formulario__datos--envio>button {
+    width: 100%;
+    border: 2px solid gray;
+    outline: none;
+    margin-bottom: 1.5rem;
+    padding: .3rem;
+}
+
+.formulario__datos--envio>button:hover {
+    background-color: var(--second-color);
+    color: var(--second-alpha-color);
+    border: var(--second-color) 2px solid;
+    transition: all 1s ease;
+}
+
+.construccion img {
+    display: block;
+    margin: auto;
+    width: 40rem;
+}
+
+/*
+*VENTANA MODAL 
+ */
+.modal {
+    position: fixed;
+    /* ocupa el 100% de la pagina */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 5, 5, 0.745);
+    display: flex;
+    opacity: 0;
+    /* desaparece el modal */
+    pointer-events: none;
+    /* investigar, permite seleccionar contenido de una pagina(evento del mouse) */
+    transition: opacity .6s;
+}
+
+.modal__container {
+    margin: auto;
+    width: 70%;
+    background-color: var(--first-alpha-color);
+    max-width: 600px;
+    max-height: 90%;
+    border-radius: 6px;
+    padding: 1rem 2rem;
+    overflow: auto;
+}
+
+.modal__ventana a {
+    display: flex;
+    justify-content: end;
+    font-size: 2rem;
+    color: var(--third-color);
+}
+
+.modal__ventana h2 {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 2.5rem;
+    font-family: var(--second-typography);
+}
+
+.modal__ventana p {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 1.5rem;
+    font-family: var(--first-typography);
+}
+
+.modal__ventana2 {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.modal__ventana2 img {
+    width: 2.5rem;
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+
+/* 
+ * *****************   FIN DE CUERPO PRINCIPAL ***************************  
+ */
+
+/*
+* * *****************   INICIO DE PIE DE PAGINA ***************************  
+ */
+.footer {
+    background-color: var(--first-color);
+    margin-top: 10rem;
+    position: relative;
+    top: 1.1875rem;
+}
+
+.footer__principal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.footer__info h3 {
+    text-align: center;
+    color: var(--first-alpha-color);
+    margin-bottom: 2rem;
+}
+
+.footer__info>ul>li>a {
+    color: var(--first-alpha-color);
+    text-decoration: none;
+}
+
+.footer__info>ul>li>a:hover {
+    color: var(--second-color);
+
+}
+
+.footer__creador>p {
+    text-align: center;
+    color: var(--first-alpha-color);
+    font-weight: 400;
+    font-family: var(--first-typography);
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+/*
+* *****************   FIN DE PIE DE PAGINA ***************************    
+ */
+/*
+ * *****************   INICIO DE RESPONSIVE ****************************** 
+  */
+/* Las reglas media queries son un tipo de reglas de CSS que permiten crear un bloque de código que sólo se procesará en los dispositivos que cumplan los criterios especificados como condición.Se trata de establecer una condición que se aplicará a la página actual, y en el caso de cumplirse, se aplicarán los estilos indicados en su interior. De no cumplirse, no se aplicarán */
+/*
+!TABLES 
+ */
+@media screen and (max-width: 1024px) {
+    .menu__logo img {
+        width: 7rem;
+    }
+
+    nav>ul>li>a {
+        font-size: 2.2em;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .bi-list {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .nav-menu ul {
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #222;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .nav-menu ul li {
+        padding: 2.4rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-menu ul li:last-child {
+        background: none;
+        padding: 1rem;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        transition: all .25s;
+    }
+
+    .portada {
+        margin-top: 3rem;
+    }
+
+    .portada__titulo>h1 {
+        font-size: 2em;
+    }
+
+    video {
+        margin-top: 1rem;
+    }
+
+    .Psicoterapia>h2,
+    .testimonios>h2 {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 3.5rem;
+    }
+
+    .info__psicoterapia>p {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .info__psicoterapia>p>span {
+        font-weight: 700;
+    }
+
+    .info__img>img {
+        width: 100%;
+
+    }
+
+    .tarjetas {
+        margin-top: 3.5rem;
+        margin-bottom: -4rem;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    .tarjetas__testimonios p {
+        font-size: 1em;
+    }
+
+    .tarjetas__testimonios h2 {
+        font-size: .8rem;
+    }
+
+    .tarjetas .tarjetas__testimonios:hover {
+        transform: none;
+    }
+
+    .tarjetas:hover>.tarjetas__testimonios:not(:hover) {
+        filter: none;
+        transform: none;
+    }
+
+    /*
+*EXPERIENCIA 
+ */
+    .psicologa h1 {
+        font-size: 2rem;
+    }
+
+    .curriculum {
+        flex-direction: column-reverse;
+    }
+
+
+    .informacion {
+        background-color: var(--first-alpha-color);
+        position: unset;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .curriculum__img img {
+        width: 17rem;
+    }
+
+    /*
+    *CONTACTO 
+ */
+
+    .contacto {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contacto__img img {
+        width: 90%;
+        display: block;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .contacto h1 {
+        font-size: 1.5rem;
+    }
+
+    .formulario__datos,
+    .formulario__datos--mensaje {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .datos {
+        width: 100%;
+        margin-top: .625rem;
+    }
+    .datos input {
+        height: 4vh;
+    }
+
+    .datos input:focus,
+    .datos input::placeholder,
+    .mensaje textarea::placeholder,
+    .mensaje textarea:focus {
+        border-bottom-width: .3rem;
+    }
+
+    .mensaje,
+    .formulario__datos--envio {
+        width: calc(100% / 1 - .5rem);
+        margin-top: .625rem;
+    }
+
+    .contacto__formulario {
+        margin-bottom: -4rem;
+    }
+
+    .construccion img {
+        width: 100%;
+    }
+
+    /* 
+    *PIE DE PAGINA
+     */
+
+    .footer__principal {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .footer__info h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer__info>ul>li {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+
+    /* 
+    *INDEX
+     */
+    nav>ul>li>a {
+        font-size: 3.2em;
+    }
+
+    .nav-menu ul li {
+        padding: 4rem;
+    }
+
+    .portada {
+        margin-top: 3rem;
+    }
+
+    .portada__titulo>h1 {
+        font-size: 2em;
+    }
+
+    video {
+        margin-top: 1rem;
+    }
+
+    .Psicoterapia>h2,
+    .testimonios>h2 {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 3.5rem;
+    }
+
+    .info__psicoterapia>p {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .info__psicoterapia>p>span {
+        font-weight: 700;
+    }
+
+    .info__img>img {
+        width: 100%;
+
+    }
+
+    .tarjetas {
+        margin-top: 3.5rem;
+        margin-bottom: -4rem;
+        flex-wrap: wrap;
+    }
+
+    .tarjetas__testimonios {
+        width: 100%;
+        cursor: none;
+    }
+
+    .tarjetas__testimonios img {
+        width: 6rem;
+        height: 6rem;
+        margin: 1rem;
+        float: left;
+    }
+
+    .tarjetas__testimonios p {
+        font-size: 1em;
+        line-height: normal;
+        text-align: start;
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    .tarjetas__testimonios h2 {
+        font-size: .8rem;
+        text-align: start;
+        margin-right: 0;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .tarjetas .tarjetas__testimonios:hover {
+        transform: none;
+    }
+
+    .tarjetas:hover>.tarjetas__testimonios:not(:hover) {
+        filter: none;
+        transform: none;
+    }
+
+    .footer__principal {
+        flex-direction: column;
+    }
+
+    .footer__info h3 {
+        text-align: center;
+        color: var(--first-alpha-color);
+        margin-bottom: 1rem;
+    }
+
+    .footer__info>ul>li {
+        text-align: center;
+    }
+}
+
+/* 
+!CELULARES
+ */
+@media screen and (max-width:480px) {
+
+    nav>ul>li>a {
+        font-size: 2em;
+    }
+
+    .nav-menu ul li {
+        padding: 2rem;
+    }
+
+    .info__img>img {
+        width: 100%;
+        height: 25vh;
+    }
+
+    /* 
+    *EXPERIENCIA
+     */
+    .curriculum__img img {
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+
+    /*
+    *VENTANA MODAL
+     */
+    .modal__container {
+        width: 95%;
+    }
+}
+
+/* permite que la pagina se adapte cuaando un dispositivo cambia la orientacion de vertical a horizontal */
+@media screen and (orientation:landscape) and (max-width: 914px) {
+
+    /*
+    *Menu 
+     */
+     .nav-menu ul li a {
+       font-size: 2em;
+    }
+
+    .nav-menu ul li {
+        padding: .2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-menu ul li:last-child {
+        background: none;
+        padding: .2rem;
+    }
+    .mensaje textarea {
+        height: 25vh;
+    }
+    
+
+    /*
+    *CONTACTO 
+    */
+    .datos input {
+        height: 7vh;
+    }
+
+    .datos input:focus,
+    .datos input::placeholder,
+    .mensaje textarea::placeholder,
+    .mensaje textarea:focus {
+        border-bottom-width: .3rem;
+    }
+}
+
+/* 
+* *****************   FIN DE RESPONSIVE ****************************** 
+ */
